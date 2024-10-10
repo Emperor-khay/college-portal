@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Enquiry Chatbot</title>
+</head>
+<body>
+    <h1>College Enquiry Chatbot</h1>
+    <form action="/ask" method="post">
+        <label for="question">Enter your question:</label><br>
+        <input type="text" id="question" name="question"><br><br>
+        <input type="submit" value="Ask">
+    </form>
+    {% if question %}
+        <h3>Your question:</h3>
+        <p>{{ question }}</p>
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
